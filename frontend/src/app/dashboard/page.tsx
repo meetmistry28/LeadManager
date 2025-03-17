@@ -370,7 +370,7 @@ export default function Page() {
   const [categorizedDeals, setCategorizedDeals] = useState<CategorizedDeals>({});
   const [categorizedTasks, setCategorizedTasks] = useState<CategorizedTasks>({});
   const [categorizedReminder, setCategorizedReminder] = useState<CategorizedReminder>({});
-  const [CategorizedScheduled, setCategorizedSchedule] = useState<CategorizedScheduled>({});
+  const [categorizedSchedule, setCategorizedSchedule] = useState<CategorizedScheduled>({});
   const [loading, setLoading] = useState(true);
 
   const [page, setPage] = useState(1);
@@ -567,7 +567,7 @@ export default function Page() {
         };
 
         return Object.values(searchableFields).some(value =>
-          String(value || '').toLowerCase().includes(filterValue.toLowerCase())
+          String(value || '').toLowerCase().includes(filterValueReminder.toLowerCase())
         );
       });
     }
@@ -579,7 +579,7 @@ export default function Page() {
     }
 
     return filteredReminder;
-  }, [leads, filterValue, statusFilter]);
+  }, [reminder, filterValueReminder, statusFilter]);
 
 
   const filteredItemsSchedule = React.useMemo(() => {
@@ -597,7 +597,7 @@ export default function Page() {
         };
 
         return Object.values(searchableFields).some(value =>
-          String(value || '').toLowerCase().includes(filterValue.toLowerCase())
+          String(value || '').toLowerCase().includes(filterValueSchedule.toLowerCase())
         );
       });
     }
@@ -609,7 +609,7 @@ export default function Page() {
     }
 
     return filteredSchedule;
-  }, [schedule, filterValue, statusFilter]);
+  }, [schedule, filterValueSchedule, statusFilter]);
 
 
   // Add this near the top of your file, where other constants are defined
@@ -2016,7 +2016,7 @@ export default function Page() {
         <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 border-b">
           <div className="flex items-center gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
-            <ModeToggle />
+            {/* <ModeToggle /> */}
             <Separator orientation="vertical" className="mr-2 h-4" />
             <Breadcrumb>
               <BreadcrumbList>
@@ -2327,6 +2327,17 @@ export default function Page() {
             <Grid item xs={12} sm={6} md={6} lg={6}>
               <h1 className="text-2xl font-semibold mb-4 mt-4" style={{ textAlign: "center" }}>Remainder Table</h1>
               <Item>
+                <div className="flex justify-between items-center gap-3">
+                  <Input
+                    isClearable
+                    className="w-full sm:max-w-[44%]"
+                    placeholder="Search by name, email, product..."
+                    startContent={<Search size={20} />}
+                    value={filterValueReminder}
+                    onClear={() => setFilterValueReminder("")}
+                    onValueChange={setFilterValueReminder}
+                  />
+                </div>
                 <Item>
                   <Table
                     isHeaderSticky
@@ -2368,6 +2379,17 @@ export default function Page() {
             <Grid item xs={12} sm={6} md={6} lg={6}>
               <h1 className="text-2xl font-semibold mb-4 mt-4" style={{ textAlign: "center" }}>Schedule Table</h1>
               <Item>
+                <div className="flex justify-between items-center gap-3">
+                  <Input
+                    isClearable
+                    className="w-full sm:max-w-[44%]"
+                    placeholder="Search by name, email, product..."
+                    startContent={<Search size={20} />}
+                    value={filterValueSchedule}
+                    onClear={() => setFilterValueSchedule("")}
+                    onValueChange={setFilterValueSchedule}
+                  />
+                </div>
                 <Item>
                   <Table
                     isHeaderSticky

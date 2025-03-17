@@ -17,9 +17,13 @@
 /.next/
 /out/
 
+# upload
+/uploads
+
 # production
 /build
 
+.env
 .env
 
 # misc
