@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react"; 
-import { Label } from "../components/ui/label";
-import { Input } from "../components/ui/input";
+import { Label } from "./ui/label";
+import { Input } from "./ui/input";
 import axios from "axios";
 import { toast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";

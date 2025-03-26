@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import GoogleDriveClone from "../flipflap/card"
+import GoogleDriveClone from "./card"
 
 import {
     SidebarInset,

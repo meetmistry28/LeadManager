@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import  ContactTable from "../table/contact-table"
+import  ContactTable from "./contact-table"
 import {
     SidebarInset,
     SidebarProvider,

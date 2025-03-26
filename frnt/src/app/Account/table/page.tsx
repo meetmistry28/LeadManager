@@ -1,6 +1,6 @@
 'use client'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import  AccountTable from "../table/Account-table"
+import  AccountTable from "./Account-table"
 import {
     SidebarInset,
     SidebarProvider,

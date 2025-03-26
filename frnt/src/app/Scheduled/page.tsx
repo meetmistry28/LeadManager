@@ -1,4 +1,4 @@
-import ScheduledEventForm from "../Scheduled/form"
+import ScheduledEventForm from "./form"
 import { AppSidebar } from "@/components/app-sidebar"
 import { Separator } from "@/components/ui/separator"
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"

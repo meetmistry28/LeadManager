@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import reminder from "../reminder/table"
+import reminder from "./table"
 import {
     SidebarInset,
     SidebarProvider,

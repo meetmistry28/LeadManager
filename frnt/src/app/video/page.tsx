@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import CardLineChart from "../video/card"
+import CardLineChart from "./card"
 
 import {
     SidebarInset,

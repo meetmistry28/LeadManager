@@ -1,6 +1,6 @@
 'use client'
 
-import AccountForm from "../Account/form"
+import AccountForm from "./form"
 import { AppSidebar } from "@/components/app-sidebar"
 import { Separator } from "@/components/ui/separator"
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"

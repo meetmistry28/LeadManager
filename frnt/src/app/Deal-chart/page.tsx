@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import CardLineChart from "../Deal-chart/chart"
+import CardLineChart from "./chart"
 
 import {
     SidebarInset,

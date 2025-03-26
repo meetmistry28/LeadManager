@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import DealFrom from "../deal/form"
+import DealFrom from "./form"
 import {
     SidebarInset,
     SidebarProvider,

@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import Certificate from "../certificate/form"
+import Certificate from "./form"
 import {
     SidebarInset,
     SidebarProvider,
